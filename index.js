@@ -3,7 +3,9 @@ const inputPercentage = document.getElementById("input-percentage")
 const calculateBtn = document.getElementById("calculate-btn")
 const percentageResult = document.getElementById("percentage-result")
 const plusIvaTotal = document.getElementById("plus-iva-total")
+const plusIvaMin = document.getElementById("plus-iva-min")
 const ivaTotal = document.getElementById("iva-total")
+const ivaMin = document.getElementById("iva-min")
 
 const addResult = document.getElementById("add-result")
 
@@ -14,7 +16,9 @@ function calculateDefault() {
     const calculateIvaMin = (numValue * 0.10) + numValue
 
     plusIvaTotal.textContent = `+ IVA 22%: ${calculateIvaTotal}`
-    ivaTotal.textContent = `IVA 10%: ${calculateIvaMin}`
+    ivaTotal.textContent = `El 22% de ${numValue} es ${numValue * 0.22}`
+    plusIvaMin.textContent = `+ IVA 10%: ${calculateIvaMin}`
+    ivaMin.textContent = `El 10% de ${numValue} es ${numValue * 0.10}`
 }
 
 
@@ -39,7 +43,7 @@ calculateBtn.addEventListener("click", () => {
     calPerc()
     calculateDefault()
 
-    //inputNum.value = ""
-    //inputPercentage.value = ""
+    inputNum.value = ""
+    inputPercentage.value = ""
 })
 
