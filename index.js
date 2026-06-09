@@ -1,13 +1,14 @@
 const inputNum = document.getElementById("input-num")
 const inputPercentage = document.getElementById("input-percentage")
 const calculateBtn = document.getElementById("calculate-btn")
-const percentageResult = document.getElementById("percentage-result")
-const plusIvaTotal = document.getElementById("plus-iva-total")
-const plusIvaMin = document.getElementById("plus-iva-min")
-const ivaTotal = document.getElementById("iva-total")
-const ivaMin = document.getElementById("iva-min")
+const resetBtn = document.getElementById("reset-btn")
 
-const addResult = document.getElementById("add-result")
+let percentageResult = document.getElementById("percentage-result")
+let plusIvaTotal = document.getElementById("plus-iva-total")
+let plusIvaMin = document.getElementById("plus-iva-min")
+let ivaTotal = document.getElementById("iva-total")
+let ivaMin = document.getElementById("iva-min")
+let addResult = document.getElementById("add-result")
 
 function calculateDefault() {
     let numValue = Number(inputNum.value)
@@ -49,3 +50,15 @@ calculateBtn.addEventListener("click", () => {
     inputPercentage.value = ""
 })
 
+function reset(){
+    percentageResult.textContent = "Resultado del Otro %"
+    plusIvaTotal.textContent = "+ IVA 22%: "
+    plusIvaMin.textContent = "+ IVA 10%: "
+    addResult.textContent = "Mas el Otro %"
+    ivaMin.textContent = ""
+    ivaTotal.textContent = ""
+}
+
+resetBtn.addEventListener("click", ()=> {
+    reset()
+})
