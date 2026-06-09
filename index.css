@@ -1,3 +1,10 @@
+html, body {
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
 #container {
     text-align: center;
 }
