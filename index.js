@@ -11,14 +11,16 @@ const addResult = document.getElementById("add-result")
 
 function calculateDefault() {
     let numValue = Number(inputNum.value)
+    let totalIvaPercentage = numValue * 0.22
+    let minIvaPercentage = numValue * 0.10
 
-    const calculateIvaTotal = (numValue * 0.22) + numValue
-    const calculateIvaMin = (numValue * 0.10) + numValue
+    const calculateIvaTotal = totalIvaPercentage + numValue
+    const calculateIvaMin = minIvaPercentage + numValue
 
-    plusIvaTotal.textContent = `+ IVA 22%: ${calculateIvaTotal}`
-    ivaTotal.textContent = `El 22% de ${numValue} es ${numValue * 0.22}`
-    plusIvaMin.textContent = `+ IVA 10%: ${calculateIvaMin}`
-    ivaMin.textContent = `El 10% de ${numValue} es ${numValue * 0.10}`
+    plusIvaTotal.textContent = `+ IVA 22% = ${calculateIvaTotal.toFixed(2)}`
+    ivaTotal.textContent = `El 22% de ${numValue} es ${totalIvaPercentage.toFixed(2)}`
+    plusIvaMin.textContent = `+ IVA 10% = ${calculateIvaMin.toFixed(2)}`
+    ivaMin.textContent = `El 10% de ${numValue} es ${minIvaPercentage.toFixed(2)}`
 }
 
 
@@ -29,13 +31,13 @@ function calPerc() {
     const calculatePercentage = (numValue * percentageValue) / 100
 
     percentageResult.textContent = `
-      The ${percentageValue}% of ${numValue} is ${calculatePercentage.toFixed(2)}
+      El ${percentageValue}% de ${numValue} es ${calculatePercentage.toFixed(2)}
     `
 
     
     const calculateAdd = + numValue + + calculatePercentage
     addResult.textContent = `
-     The sum of ${calculatePercentage.toFixed(2)} to ${numValue} is ${calculateAdd.toFixed(2)}
+     La suma de ${calculatePercentage.toFixed(2)} a ${numValue} es ${calculateAdd.toFixed(2)}
     `
 }
 
