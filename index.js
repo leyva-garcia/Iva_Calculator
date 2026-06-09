@@ -2,8 +2,21 @@ const inputNum = document.getElementById("input-num")
 const inputPercentage = document.getElementById("input-percentage")
 const calculateBtn = document.getElementById("calculate-btn")
 const percentageResult = document.getElementById("percentage-result")
-const substractionResult = document.getElementById("substraction-result")
+const plusIvaTotal = document.getElementById("plus-iva-total")
+const ivaTotal = document.getElementById("iva-total")
+
 const addResult = document.getElementById("add-result")
+
+function calculateDefault() {
+    let numValue = Number(inputNum.value)
+
+    const calculateIvaTotal = (numValue * 0.22) + numValue
+    const calculateIvaMin = (numValue * 0.10) + numValue
+
+    plusIvaTotal.textContent = `+ IVA 22%: ${calculateIvaTotal}`
+    ivaTotal.textContent = `IVA 10%: ${calculateIvaMin}`
+}
+
 
 function calPerc() {
     let numValue = inputNum.value
@@ -15,10 +28,7 @@ function calPerc() {
       The ${percentageValue}% of ${numValue} is ${calculatePercentage.toFixed(2)}
     `
 
-    const calculateSubstraction = numValue - calculatePercentage.toFixed(2)
-    substractionResult.textContent = `
-     The substraction of ${calculatePercentage.toFixed(2)} to ${numValue} is ${calculateSubstraction.toFixed(2)}
-    `
+    
     const calculateAdd = + numValue + + calculatePercentage
     addResult.textContent = `
      The sum of ${calculatePercentage.toFixed(2)} to ${numValue} is ${calculateAdd.toFixed(2)}
@@ -27,9 +37,9 @@ function calPerc() {
 
 calculateBtn.addEventListener("click", () => {
     calPerc()
+    calculateDefault()
 
-
-    inputNum.value = ""
-    inputPercentage.value = ""
+    //inputNum.value = ""
+    //inputPercentage.value = ""
 })
 

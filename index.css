@@ -1,0 +1,21 @@
+#container {
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+#calculate-btn {
+    margin: 25px;
+    padding: 10px 26px;
+    width: 150px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+#results {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}

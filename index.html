@@ -8,24 +8,29 @@
 </head>
 
 <body>
-    <header>Calculadora IVA</header>
+    
 
     <div id="container">
+      <header>
+        <h1>Calculadora IVA</h1>
+      </header>
 
       <form id="percentage-form">
-        <label for="input-num">Enter a number</label>
+        <label for="input-num">Total: </label>
         <input type="number" id="input-num" required>
 
-        <label for="input-percentage">Enter %</label>
+        <label for="input-percentage">Otro %</label>
         <input type="number" id="input-percentage" required>
       </form>
 
-      <button id="calculate-btn">Calculate</button>
+      <button id="calculate-btn">Calcular</button>
 
       <div id="results">
-        <div id="percentage-result">Persentage Result</div>
-        <div id="substraction-result">Substraction Result</div>
-        <div id="add-result">Add Result</div>
+        <div id="plus-iva-total"><strong>+ </strong>IVA 22%: </div>
+        <div id="iva-total">IVA 22%: </div>
+        <div id="percentage-result">Resultado del %</div>
+        
+        <div id="add-result">Mas el %</div>
       </div>
 
     </div>
