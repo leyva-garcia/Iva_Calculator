@@ -80,3 +80,8 @@ button:hover {
     flex-direction: column;
     gap: 15px;
 }
+
+.highlight {
+    color: #4f9cff;
+    font-weight: bold;
+}

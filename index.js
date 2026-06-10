@@ -18,9 +18,9 @@ function calculateDefault() {
     const calculateIvaTotal = totalIvaPercentage + numValue
     const calculateIvaMin = minIvaPercentage + numValue
 
-    plusIvaTotal.textContent = `+ IVA 22% = ${calculateIvaTotal.toFixed(2)}`
+    plusIvaTotal.innerHTML = `+ IVA 22% = <span class="highlight">${calculateIvaTotal.toFixed(2)}</span>`
     ivaTotal.textContent = `El 22% de ${numValue} es ${totalIvaPercentage.toFixed(2)}`
-    plusIvaMin.textContent = `+ IVA 10% = ${calculateIvaMin.toFixed(2)}`
+    plusIvaMin.innerHTML = `+ IVA 10% = <span class="highlight">${calculateIvaMin.toFixed(2)}</span>`
     ivaMin.textContent = `El 10% de ${numValue} es ${minIvaPercentage.toFixed(2)}`
 }
 
@@ -31,14 +31,14 @@ function calPerc() {
 
     const calculatePercentage = (numValue * percentageValue) / 100
 
-    percentageResult.textContent = `
-      El ${percentageValue}% de ${numValue} es ${calculatePercentage.toFixed(2)}
+    percentageResult.innerHTML = `
+      El ${percentageValue}% de ${numValue} = <span class="highlight">${calculatePercentage.toFixed(2)}</span>
     `
 
     
     const calculateAdd = + numValue + + calculatePercentage
-    addResult.textContent = `
-     La suma de ${calculatePercentage.toFixed(2)} a ${numValue} es ${calculateAdd.toFixed(2)}
+    addResult.innerHTML = `
+     La suma de ${calculatePercentage.toFixed(2)} y ${numValue} = <span class="highlight">${calculateAdd.toFixed(2)}</span>
     `
 }
 
