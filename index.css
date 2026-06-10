@@ -3,6 +3,14 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Rubik', sans-serif;
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+input {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    border: 1px solid #444;
 }
 
 #container {
@@ -19,6 +27,52 @@ header {
     width: 150px;
     border-radius: 7px;
     cursor: pointer;
+}
+
+button {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #555;
+}
+
+button:hover {
+    background-color: #444444;
+}
+
+#reset-btn {
+    margin: 14px auto;
+    padding: 12px 26px;
+    width: min(100%, 320px);
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+#percentage-form {
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+#percentage-form label,
+#percentage-form input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#percentage-form label {
+    margin: 16px 0 6px;
+    text-align: left;
+}
+
+#percentage-form input {
+    padding: 12px;
+}
+
+#calculate-btn {
+    display: block;
+    width: min(100%, 320px);
+    margin: 14px auto;
+    padding: 12px 26px;
 }
 
 #results {

@@ -46,8 +46,7 @@ calculateBtn.addEventListener("click", () => {
     calPerc()
     calculateDefault()
 
-    inputNum.value = ""
-    inputPercentage.value = ""
+    
 })
 
 function reset(){
@@ -57,6 +56,8 @@ function reset(){
     addResult.textContent = "Mas el Otro %"
     ivaMin.textContent = ""
     ivaTotal.textContent = ""
+    inputNum.value = ""
+    inputPercentage.value = ""
 }
 
 resetBtn.addEventListener("click", ()=> {
